@@ -5,7 +5,7 @@
  */
 
 require("./bootstrap");
-
+import Ckeditor from "vue-ckeditor2";
 window.Vue = require("vue");
 import Vuex from "Vuex";
 Vue.use(Vuex);
@@ -38,6 +38,7 @@ Vue.component("migalhas", require("./components/Migalhas.vue"));
 Vue.component("modal", require("./components/modal/Modal.vue"));
 Vue.component("modallink", require("./components/modal/ModalLink.vue"));
 Vue.component("formulario", require("./components/Formulario.vue"));
+Vue.component("ckeditor", require("./components/Ckeditor.vue"));
 
 const app = new Vue({
   el: "#app",

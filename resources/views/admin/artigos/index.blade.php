@@ -33,9 +33,14 @@
             <input type="text" class="form-control" id="descricao" name="descricao" placeholder="Descrição" value="{{old('descricao')}}">
         </div>
         <div class="form-group">
-            <label for="addConteudo">Conteúdo</label>
-            <textarea class="form-control" name="conteudo" id="conteudo">{{old('conteudo')}} </textarea>                
-        </div>
+            <label for="addConteudo">Conteúdo</label>            
+            <ckeditor 
+            id="addConteudo"
+            name="conteudo"
+            value="{{old('conteudo')}}"                                      
+            >         
+            </ckeditor>
+        </div>        
         <div class="form-group">
             <label for="data">Data</label>
             <input type="datetime-local" class="form-control" id="data" name="data" value="{{old('data')}}">
@@ -57,7 +62,14 @@
         </div>
         <div class="form-group">
             <label for="editConteudo">Conteúdo</label>
-            <textarea class="form-control" name="conteudo" id="editConteudo" v-model="$store.state.item.conteudo"></textarea>
+            {{-- <textarea class="form-control" name="conteudo" id="editConteudo" v-model="$store.state.item.conteudo"></textarea> --}}
+            <ckeditor 
+            id="editConteudo"
+          name="conteudo"
+          v-model="$store.state.item.conteudo"                     
+            value="{{old('conteudo')}}" 
+        >         
+        </ckeditor>
         </div>
         <div class="form-group">
             <label for="data">Data</label>
